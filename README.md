@@ -44,7 +44,7 @@ python voctococo.py
 ```
 
 
-# mmdetection 安装及配置
+# 二、mmdetection 安装及配置
 ```
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install -U openmim
@@ -67,4 +67,5 @@ mask_rcnn.py
 sparse_rcnn.py 
 ```
 
+# 训练
 
