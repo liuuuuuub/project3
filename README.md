@@ -67,5 +67,18 @@ mask_rcnn.py
 sparse_rcnn.py 
 ```
 
-# 训练
+# 三、训练 
+```
+cd mmdetection
+python tools/train.py configs/mask_rcnn/mask_rcnn.py
+python tools/train.py configs/queryinst/sparse_rcnn.py
+```
 
+### tensorboard可视化 
+```
+tensorboard --logdir='.output/mask_rcnn_coco2007/tensorboard --port=6006'
+tensorboard --logdir='.output/sparse_rcnn_coco2007/tensorboard --port=6007'
+```
+
+### inferience
+python 
