@@ -2,7 +2,36 @@
 
 项目结构
 ```
-
+/project/
+├── data/                            # 数据集文件夹
+│   ├── VOCdevkit/                   # 原始 VOC 数据集
+│   │   └── VOC2007/
+│   │       ├── Annotations/         # 原始 VOC 标注 XML 文件
+│   │       ├── ImageSets/           # 数据集划分（train, val, test）
+│   │       ├── JPEGImages/          # 原始图片文件
+│   │       └── SegmentationClass/   # 语义分割标注
+│   └── COCO/                        # 转换后的 COCO 格式数据集
+│   │    ├── annotations/             # COCO 格式的标注 JSON 文件
+│   │    │   ├── train2007.json
+│   │    │   └── val2007.json
+│   │    └── 
+│   │        ├── train2007/           # 训练集图片
+│   │        └── val2007/             # 验证集图片
+│   └── voctococo.py                 # voc数据转coco数据脚本
+│ 
+├── mmdetection/                     # mmdetection 代码库
+│   ├── configs/                     # 配置文件目录  主要修改配置
+│   ├── tools/                       # 工具脚本
+│
+├── outputs/                         # 输出文件夹
+│   ├── mask_rcnn/                   # Mask R-CNN 输出目录
+│   │   ├── latest.pth               # 最新的模型权重
+│   │   └── logs/                    # 训练日志和 TensorBoard 可视化
+│   └── sparse_rcnn/                 # Sparse R-CNN 输出目录
+│       ├── latest.pth               # 最新的模型权重
+│       └── logs/                    # 训练日志和 TensorBoard 可视化
+│
+└── inference.py                     # 主要推理脚本
 ```
 
 
@@ -81,4 +110,11 @@ tensorboard --logdir='.output/sparse_rcnn_coco2007/tensorboard --port=6007'
 ```
 
 ### inferience
-python 
+```
+python inference.py
+```
+
+![image](https://github.com/user-attachments/assets/43f33181-b16d-4548-ac32-986d15c80eec)
+![image](https://github.com/user-attachments/assets/7af1d8d4-676f-49b5-a95a-79bfb2a0b714)
+
+
