@@ -37,8 +37,8 @@ python voctococo.py
 │       ├── annotations/            # COCO 格式的标注 JSON 文件
 │       │   ├── train2007.json
 │       │   └── val2007.json
-│       └── images/
-│           ├── train2007/          # 训练图片（从 VOC2007/JPEGImages 复制）
+│       │
+│       └── ├── train2007/          # 训练图片（从 VOC2007/JPEGImages 复制）
 │           └── val2007/            # 验证图片（从 VOC2007/JPEGImages 复制）
 
 ```
