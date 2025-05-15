@@ -42,3 +42,29 @@ python voctococo.py
 │           └── val2007/            # 验证图片（从 VOC2007/JPEGImages 复制）
 
 ```
+
+
+# mmdetection 安装及配置
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+pip install -U openmim
+mim install mmcv-full
+git clone https://github.com/open-mmlab/mmdetection.git .
+pip install -r requirements.txt
+pip install -e .
+```
+
+修改相关配置 如data classes
+```
+configs/_base_/datasets/voc0712.py
+mmdet/datasets/coco.py
+mmdet/core/evaluation/class_names.py
+```
+
+模型相关配置重新设定，放在指定文件夹
+```
+mask_rcnn.py
+sparse_rcnn.py 
+```
+
+
