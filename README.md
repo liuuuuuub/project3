@@ -6,23 +6,24 @@
 ```
 
 
-一、数据集
-# 下载数据集
+# 一、数据集
+### 下载数据集
 ```
 wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar
 wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar
 ```
-# 解压数据集
+### 解压数据集
 ```
 tar -xvf VOCtrainval_06-Nov-2007.tar
 tar -xvf VOCtest_06-Nov-2007.tar
 ```
-# voc数据集转化为coco数据集
+### voc数据集转化为coco数据集
+进入data文件夹
 ```
 python voctococo.py
 ```
 
-# 数据集结构
+### 数据集结构
 ```
 ├── data/
 │   ├── VOCdevkit/
